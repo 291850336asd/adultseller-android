@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="300dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/default_background" >
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        />
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:contentDescription="this is an image about the movie"
+        android:scaleType="centerCrop"
+        android:background="@color/white"
+        />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/video_name_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        tools:text="小鸡小鸡"
+        android:textSize="@dimen/dimens_16_sp"
+        android:paddingLeft="@dimen/dimens_10_dp"
+        android:paddingTop="@dimen/dimens_6_dp"
+        android:paddingRight="@dimen/dimens_10_dp"
+        android:gravity="center_horizontal"
+        />
+    <adult.mas.com.adultgoodssell.view.MainIconText
+        android:id="@+id/video_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens_20_dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_24_sp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="\ue87c"
+        />
+</RelativeLayout>

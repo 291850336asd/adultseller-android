@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleDialogView">
+        <attr name="circle_width" format="dimension" />
+        <attr name="circle_corner" format="dimension" />
+        <attr name="view_bg_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DotPointView">
+        <attr name="point_view_selector_background" format="reference" />
+        <attr name="point_view_point_size" format="dimension" />
+        <attr name="point_view_point_margin" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewPageSquare">
+        <attr name="isquare" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="XRecView">
+        <attr name="maxLength" format="dimension"/>
+    </declare-styleable>
+</resources>

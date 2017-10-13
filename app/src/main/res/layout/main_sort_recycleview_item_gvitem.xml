@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dimens_10_dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <adult.mas.com.adultgoodssell.view.SquareImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/dimens_60_dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:textSize="@dimen/text_12_sp"/>
+</LinearLayout>

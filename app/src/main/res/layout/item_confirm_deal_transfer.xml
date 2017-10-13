@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/transferName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_10_dp"
+            android:text="顺丰快递"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/text_12_sp" />
+
+        <adult.mas.com.adultgoodssell.view.MainIconText
+            android:id="@+id/selectIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dimens_10_dp"
+            android:text="\ue624"
+            android:textColor="@color/color_999" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_1_dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/default_background" />
+</RelativeLayout>

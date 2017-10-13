@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdultGoodsSell.iml" filepath="$PROJECT_DIR$/AdultGoodsSell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpmodel/httpmodel.iml" filepath="$PROJECT_DIR$/httpmodel/httpmodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageload/imageload.iml" filepath="$PROJECT_DIR$/imageload/imageload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thirdviewmodel/thirdviewmodel.iml" filepath="$PROJECT_DIR$/thirdviewmodel/thirdviewmodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zzshow/zzshow.iml" filepath="$PROJECT_DIR$/zzshow/zzshow.iml" />
+    </modules>
+  </component>
+</project>

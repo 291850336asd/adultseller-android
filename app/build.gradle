@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "adult.mas.com.adultgoodssell"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable "ResourceType"
+    }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'adultseller'
+            keyPassword 'adultseller'
+            storeFile file('../keystore.jks')
+            storePassword 'adultseller'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+        }
+    }
+}
+apply plugin: 'blockcanaryex'
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':httpmodel')
+    compile project(':thirdviewmodel')
+    compile project(':imageload')
+    compile project(':zzshow')
+    compile 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.anupcowkur:reservoir:3.1.0'
+    debugCompile 'com.letv.sarrsdesktop:BlockCanaryExJRT:0.9.9.4'
+    releaseCompile 'com.letv.sarrsdesktop:BlockCanaryExJRTNoOp:0.9.9.4'
+}

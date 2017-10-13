@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_FBAB2D"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dimens_20_dp"
+        android:textSize="@dimen/text_20_sp"
+        android:textColor="@color/black"
+        android:text="@string/secret_lock"
+        android:layout_above="@+id/lockview"/>
+    <adult.mas.com.thirdviewmodel.lockview.Lock9View
+        android:id="@+id/lockview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:lock9_nodeSrc="@drawable/node_normal"
+        app:lock9_nodeOnSrc="@drawable/node_active"
+        app:lock9_nodeOnAnim="@anim/node_on_1"
+        app:lock9_padding="28dp"
+        app:lock9_spacing="28dp"
+        app:lock9_lineColor="@color/blue_light"
+        app:lock9_lineWidth="@dimen/dimens_8_dp"
+        app:lock9_autoLink="false"
+        app:lock9_enableVibrate="true"
+        app:lock9_vibrateTime="20" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_14_sp"
+        android:gravity="center"
+        android:layout_below="@+id/lockview"
+        android:padding="@dimen/dimens_20_dp"
+        android:textColor="@color/color_999"
+        android:text="Safe And Soft"/>
+</RelativeLayout>

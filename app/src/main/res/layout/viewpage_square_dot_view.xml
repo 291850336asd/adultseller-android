@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <adult.mas.com.adultgoodssell.view.SquareViewPage
+        android:id="@+id/viewPager"
+        android:background="@color/color_fd7530"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_210_dp"/>
+    <adult.mas.com.adultgoodssell.view.DotPointView
+        android:id="@+id/at_dot_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_8_dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dimens_10_dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:point_view_point_margin="@dimen/dimens_10_dp"
+        app:point_view_point_size="@dimen/dimens_8_dp"
+        app:point_view_selector_background="@drawable/selector_home_dot">
+    </adult.mas.com.adultgoodssell.view.DotPointView>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/name"
+    android:background="@drawable/shape_circle_half_centerempty"
+    android:layout_margin="@dimen/dimens_10_dp"
+    android:paddingLeft="@dimen/dimens_10_dp"
+    android:paddingRight="@dimen/dimens_10_dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:textSize="@dimen/text_12_sp"
+    android:textColor="@color/color_999"
+    android:gravity="center"
+    tools:text="@string/add_marketshop"
+    />

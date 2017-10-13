@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include layout="@layout/search_header"/>
+    <adult.mas.com.thirdviewmodel.view.xrecycleview.XRecyclerView
+        android:id="@+id/xRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background"
+        android:dividerHeight="@dimen/dimens_0_dp"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:animationCache="false">
+    </adult.mas.com.thirdviewmodel.view.xrecycleview.XRecyclerView>
+    <LinearLayout
+        android:id="@+id/errorLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+        <adult.mas.com.adultgoodssell.view.MainIconText
+            android:id="@+id/errorIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_B3B3B3"
+            android:padding="@dimen/dimens_30_dp"
+            android:text="\ue6ed"
+            android:textSize="@dimen/text_100_sp"/>
+        <TextView
+            android:id="@+id/errorData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimens_10_dp"
+            android:paddingRight="@dimen/dimens_10_dp"
+            android:textColor="@color/color_B3B3B3"
+            android:textSize="@dimen/text_14_sp"
+            android:text="@string/net_not_connnect_clickrefresh"/>
+    </LinearLayout>
+</LinearLayout>

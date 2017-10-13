@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dialog_default_bg">#66000000</color><!--(245,244,249)-->
+    <color name="default_background">#f7f7f7</color><!--(245,244,249)-->
+    <color name="color_999">#999</color>
+    <color name="color_pot_line">@color/default_background</color>
+    <color name="color_fd7530">#fd7530</color>
+    <color name="color_FBAB2D">#FBAB2D</color>
+    <color name="color_hint">#6999</color>
+    <color name="white">#FFF</color>
+    <color name="at_color_ffffff_40">#66ffffff</color>
+    <!-- dialog loading color-->
+    <color name="at_color_dialog_loading">#cc88cc00</color>
+    <color name="at_color_dialog_loading_light">#6677cc00</color>
+    <color name="at_color_dialog_loading_green_light">#ff99cc00</color>
+    <color name="at_color_pressed">#7cb700</color>
+    <color name="color_B3B3B3">#B3B3B3</color>
+    <color name="black">#000</color><!--(255,102,166)-->
+    <color name="background_half_transparent">#96000000</color>
+    <color name="blue_light">#ff33b5e5</color>
+</resources>

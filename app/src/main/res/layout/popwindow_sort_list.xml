@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <adult.mas.com.adultgoodssell.view.MaxRecycleView
+        android:id="@id/xRecycleView"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dimens_10_dp"
+        android:layout_height="wrap_content"
+        app:maxLength="@dimen/dimens_200dp">
+    </adult.mas.com.adultgoodssell.view.MaxRecycleView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_2_dp"
+        android:background="@color/default_background"/>
+</LinearLayout>

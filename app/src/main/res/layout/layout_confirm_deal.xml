@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+    <include layout="@layout/search_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0_dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0_dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/addAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_40_dp"
+                    android:background="@color/color_fd7530">
+
+                    <adult.mas.com.adultgoodssell.view.MainIconText
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/dimens_10_dp"
+                        android:text="\ue651"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_24_sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/icon"
+                        android:text="@string/please_put_address"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_14_sp" />
+
+                    <adult.mas.com.adultgoodssell.view.MainIconText
+                        android:id="@+id/arraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimens_10_dp"
+                        android:text="\ue6a7"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_24_sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/userInfo"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimens_10_dp">
+                    <TextView
+                        android:id="@+id/addressinfo"
+                        android:layout_width="wrap_content"
+                        android:text="@string/receice_info_"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_14_sp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_below="@+id/addressinfo"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        tools:text="@string/app_name"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id ="@+id/userPhone"
+                        android:layout_below="@+id/addressinfo"
+                        android:layout_toRightOf="@+id/userName"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_10_dp"
+                        tools:text="@string/app_name"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/userDetailAddress"
+                        android:layout_below="@+id/userName"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
+                        android:layout_width="wrap_content"
+                        tools:text="@string/app_name"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_50_dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/default_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimens_10_dp"
+                    android:text="@string/pay_model"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16_sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <adult.mas.com.adultgoodssell.view.MainIconText
+                        android:layout_width="@dimen/dimens_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/dimens_10_dp"
+                        android:text="\ue656"
+                        android:textColor="@color/at_color_pressed"
+                        android:textSize="@dimen/text_20_sp" />
+
+                    <adult.mas.com.adultgoodssell.view.MainIconText
+                        android:layout_width="@dimen/dimens_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/dimens_10_dp"
+                        android:text="\ue688"
+                        android:textColor="@color/color_999"
+                        android:textSize="@dimen/text_20_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_40_dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/default_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimens_10_dp"
+                    android:text="@string/transfer_model"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16_sp" />
+
+                <LinearLayout
+                    android:id="@+id/transferAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_40_dp"
+                    android:background="@color/default_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dimens_10_dp"
+                        android:text="@string/goods_detail"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16_sp" />
+
+                    <TextView
+                        android:id="@+id/totalCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/totalPrice"
+                        android:gravity="center_vertical"
+                        android:text="@string/total_price_text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_12_sp" />
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/money_icon"
+                        android:paddingRight="@dimen/dimens_10_dp"
+                        android:text="@string/price_default"
+                        android:textColor="@color/color_fd7530"
+                        android:textSize="@dimen/text_12_sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <adult.mas.com.thirdviewmodel.view.xrecycleview.XRecyclerView
+                android:id="@+id/xRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animationCache="false"
+                android:background="@color/default_background"
+                android:dividerHeight="@dimen/dimens_0_dp"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"></adult.mas.com.thirdviewmodel.view.xrecycleview.XRecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_50_dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_1_dp"
+            android:background="@color/default_background" />
+
+        <TextView
+            android:id="@+id/textpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dimens_10_dp"
+            android:text="@string/pay_price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14_sp" />
+
+        <TextView
+            android:id="@+id/totalBottomPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textpay"
+            android:layout_alignBottom="@+id/textpay"
+            android:layout_toEndOf="@+id/textpay"
+            android:layout_toRightOf="@+id/textpay"
+            android:drawableLeft="@drawable/money_icon"
+            android:paddingRight="@dimen/dimens_10_dp"
+            android:text="@string/price_default"
+            android:textColor="@color/color_fd7530"
+            android:textSize="@dimen/text_14_sp" />
+
+        <TextView
+            android:id="@+id/submitDeal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/background_red"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_15dp"
+            android:paddingRight="@dimen/dimens_15dp"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16_sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

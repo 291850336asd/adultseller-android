@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <adult.mas.com.adultgoodssell.view.combineview.ViewPageDotLayout
+        android:id="@+id/viewPageDotLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </adult.mas.com.adultgoodssell.view.combineview.ViewPageDotLayout>
+    <adult.mas.com.adultgoodssell.view.DividerLineGridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3">
+    </adult.mas.com.adultgoodssell.view.DividerLineGridView>
+    <adult.mas.com.thirdviewmodel.marqueeview.MarqueeView
+        android:id="@+id/marqueeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_999">
+    </adult.mas.com.thirdviewmodel.marqueeview.MarqueeView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_70dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimens_16_sp"
+            android:text="@string/hot_search"
+            />
+    </LinearLayout>
+</LinearLayout>
