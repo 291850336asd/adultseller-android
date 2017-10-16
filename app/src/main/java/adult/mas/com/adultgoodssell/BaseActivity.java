@@ -15,13 +15,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 import adult.mas.com.adultgoodssell.constant.ConstantData;
 import adult.mas.com.adultgoodssell.utils.StatusBarUtils;
-import adult.mas.com.adultgoodssell.view.dialogview.ClockViewDialog;
 
 /**
  * Created by sunmeng on 17/7/31.
@@ -31,7 +28,7 @@ import adult.mas.com.adultgoodssell.view.dialogview.ClockViewDialog;
 
 public class BaseActivity extends AppCompatActivity {
     protected ATRequestPermissionCallBack permissionCallBack;
-    private static ClockViewDialog clockViewDialog;
+   // private static ClockViewDialog clockViewDialog;
     private static boolean isBackGround = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,8 +67,8 @@ public class BaseActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if(isBackGround){
-            clockViewDialog = new ClockViewDialog(getContext(), R.style.dialog_full);
-            clockViewDialog.show();
+//            clockViewDialog = new ClockViewDialog(getContext(), R.style.dialog_full);
+//            clockViewDialog.show();
             isBackGround = false;
         }
 

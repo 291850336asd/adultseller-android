@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,6 +16,9 @@ import adult.mas.com.adultgoodssell.modelbean.mainview.goodssort.GoodsSortList;
 import adult.mas.com.adultgoodssell.utils.CollectionUtils;
 import adult.mas.com.adultgoodssell.utils.ResourcesUtils;
 import adult.mas.com.adultgoodssell.view.DividerLineGridView;
+import adult.mas.com.thirdviewmodel.tagview.DIRECTION;
+import adult.mas.com.thirdviewmodel.tagview.TagGroupModel;
+import adult.mas.com.thirdviewmodel.tagview.TagImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -50,8 +53,27 @@ public class SortRecycleAdapter extends RecyclerView.Adapter<SortRecycleAdapter.
         }else {
             holder.nameBgLL.setBackgroundColor(ResourcesUtils.getColorById(mContext, R.color.at_color_pressed));
             holder.nameBgLL.setVisibility(View.VISIBLE);
-            holder.name.setText(mDatas.get(position-1).getSortName());
+            //holder.name.setText(mDatas.get(position-1).getSortName());
+            if(holder.imageView != null){
+                TagGroupModel model = new TagGroupModel();
+                TagGroupModel.Tag tag3 = new TagGroupModel.Tag();
+                tag3.setDirection(DIRECTION.RIGHT_CENTER.getValue());
+                tag3.setName(mDatas.get(position-1).getSortName());
+                //tag3.setLink("");
+                if(position%2 == 0){
+                    model.setPercentY(0.4f);
+                }else {
+                    model.setPercentY(0.6f);
+                }
+                model.setPercentX(0.2f);
+                if(position%3 != 0){
+                    model.setPercentX(0.2f + (position%3 * 0.2f));
+                }
+                model.getTags().add(tag3);
+                holder.imageView.setTag(model);
+            }
         }
+
         holder.gridView.setAdapter(new SortRecycleGridViewAdapter(mContext, mDatas, position));
 
     }
@@ -62,8 +84,10 @@ public class SortRecycleAdapter extends RecyclerView.Adapter<SortRecycleAdapter.
     }
     class RecommendVH extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.tagImageView)
+        TagImageView imageView;
         @BindView(R.id.nameBgLL)
-        LinearLayout nameBgLL;
+        RelativeLayout nameBgLL;
         @BindView(R.id.name)
         TextView name;
         @BindView(R.id.gridView)

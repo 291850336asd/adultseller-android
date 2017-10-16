@@ -15,7 +15,7 @@ public class GoodsSellerUtils {
         if (null == goodsSellService) {
             goodsSellService = HttpFactory.getAPIService(
                     GoodsSellService.class,
-                    "http://10.6.18.13:8080"
+                    "http://10.6.17.217:8080"
             );
         }
         return goodsSellService;
