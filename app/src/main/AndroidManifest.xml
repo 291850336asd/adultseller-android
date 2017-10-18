@@ -54,6 +54,12 @@
             android:theme="@style/ThemeTranslucent"
             />
         <activity
+            android:name=".bussiness.webview.BaseWebAvtivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/ThemeTranslucent"
+            />
+        <activity
             android:name=".bussiness.address.AddAddressActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
