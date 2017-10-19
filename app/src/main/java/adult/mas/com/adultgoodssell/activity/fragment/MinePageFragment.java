@@ -21,7 +21,6 @@ public class MinePageFragment extends BaseFragment {
 
     @BindView(R.id.dealsweb)
     View dealsweb;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

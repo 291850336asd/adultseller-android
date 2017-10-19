@@ -1,13 +1,14 @@
 package adult.mas.com.adultgoodssell.bussiness.webview;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import adult.mas.com.adultgoodssell.R;
 import adult.mas.com.adultgoodssell.TranslucentActivity;
+import adult.mas.com.adultgoodssell.view.ProgressWebView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,13 +19,17 @@ import butterknife.ButterKnife;
 public class BaseWebAvtivity extends TranslucentActivity{
 
     @BindView(R.id.webView)
-    WebView webView;
+    ProgressWebView webView;
+
+    private JSHook jsHook;
+
+    @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface", "JavascriptInterface"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty_deals_list);
         ButterKnife.bind(this);
-
+        jsHook = new JSHook(getContext());
         WebSettings webSettings = webView.getSettings();
         //如果访问的页面中要与Javascript交互，则webview必须设置支持Javascript
         webSettings.setJavaScriptEnabled(true);
@@ -46,11 +51,22 @@ public class BaseWebAvtivity extends TranslucentActivity{
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口
         webSettings.setLoadsImagesAutomatically(true); //支持自动加载图片
         webSettings.setDefaultTextEncodingName("utf-8");//设置编码格式
-
+        webView.addJavascriptInterface(jsHook, JSHook.JSHOOK);
         webView.loadUrl("http://10.6.17.217:8081/all.html");
         //覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开
         webView.setWebViewClient(new WebViewClient(){
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if(webView != null && jsHook.showDetail > 0){
+            jsHook.closeDetail();
+            webView.loadUrl("javascript:window.hideDealDetails()");
+        }else {
+            super.onBackPressed();
+        }
     }
 
     @Override
@@ -64,4 +80,5 @@ public class BaseWebAvtivity extends TranslucentActivity{
         }
         super.onDestroy();
     }
+
 }
