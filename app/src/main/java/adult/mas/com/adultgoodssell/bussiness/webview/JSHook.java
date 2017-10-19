@@ -4,6 +4,8 @@ import android.content.Context;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
+import adult.mas.com.adultgoodssell.BaseActivity;
+
 /**
  * Created by sunmeng on 17/10/19.
  */
@@ -17,7 +19,7 @@ public class JSHook {
 
 
     public JSHook(Context context) {
-        this.context = context.getApplicationContext();
+        this.context = context;
     }
 
     @JavascriptInterface()
@@ -32,6 +34,12 @@ public class JSHook {
 
     @JavascriptInterface()
     public void getInfo(){
-        Toast.makeText(context, "seller tostring", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context.getApplicationContext(), "seller tostring", Toast.LENGTH_SHORT).show();
     }
+
+    @JavascriptInterface()
+    public void closeActivity(){
+        ((BaseActivity)context).finish();
+    }
+
 }
