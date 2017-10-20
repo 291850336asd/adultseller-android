@@ -42,4 +42,9 @@ public class JSHook {
         ((BaseActivity)context).finish();
     }
 
+    @JavascriptInterface()
+    public String getStringId(){
+        return "xxxxx123";
+    }
+
 }
